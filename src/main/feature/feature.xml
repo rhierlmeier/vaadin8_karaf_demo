@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features name="${project.artifactId}" xmlns="http://karaf.apache.org/xmlns/features/v1.4.0">
+
+    <feature name="${project.artifactId}" version="${project.version}">
+        <feature version="[${vaadin.version},9)">vaadin</feature>
+        <feature>war</feature>
+        <bundle>mvn:${project.groupId}/${project.artifactId}/${project.version}</bundle>
+    </feature>
+    <feature name="vaadin" version="${vaadin.version}">
+        <feature>http</feature>
+        <feature>http-whiteboard</feature>
+        <bundle>mvn:org.jsoup/jsoup/1.11.2</bundle>
+        <bundle>mvn:com.vaadin.external/gentyref/1.2.0.vaadin1</bundle>
+        <bundle>mvn:com.vaadin.external.atmosphere/atmosphere-runtime/2.4.30.vaadin3</bundle>
+        <bundle>mvn:com.vaadin.external.slf4j/vaadin-slf4j-jdk14/1.6.1</bundle>
+        <bundle>mvn:com.vaadin/vaadin-shared/${vaadin.version}</bundle>
+        <bundle>mvn:com.vaadin/vaadin-server/${vaadin.version}</bundle>
+        <bundle>mvn:com.vaadin/vaadin-push/${vaadin.version}</bundle>
+        <bundle>mvn:com.vaadin/vaadin-client-compiled/${vaadin.version}</bundle>
+        <bundle>mvn:com.vaadin/vaadin-themes/${vaadin.version}</bundle>
+        <!--
+        <bundle>mvn:com.vaadin/vaadin-osgi-integration/${vaadin.version}</bundle>
+        -->
+    </feature>
+
+</features>

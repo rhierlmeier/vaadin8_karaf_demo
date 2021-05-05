@@ -32,7 +32,10 @@ public class MyUIServlet extends VaadinServlet {
             if(resService != null) {
                 ret = resService.findResourceURL(filename);
             }
-            m_Log.warning(() -> "resource " + filename + " not found");
+            if(ret == null)
+            {
+                m_Log.warning(() -> "resource " + filename + " not found");
+            }
         }
         return ret;
     }

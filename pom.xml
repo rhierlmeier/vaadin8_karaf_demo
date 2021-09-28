@@ -14,16 +14,16 @@
 	</prerequisites>
 
 	<properties>
-		<vaadin.version>8.13.0</vaadin.version>
-		<vaadin.plugin.version>8.13.0</vaadin.plugin.version>
-		<jetty.plugin.version>9.3.9.v20160517</jetty.plugin.version>
+		<vaadin.version>8.14.0</vaadin.version>
+		<vaadin.plugin.version>8.14.0</vaadin.plugin.version>
+		<jetty.plugin.version>9.4.43.v20210629</jetty.plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<!-- If there are no local customizations, this can also be "fetch" or "cdn" -->
 		<vaadin.widgetset.mode>local</vaadin.widgetset.mode>
 
-		<karaf.version>4.3.1</karaf.version>
+		<karaf.version>4.3.3</karaf.version>
 	</properties>
 
 	<dependencyManagement>
@@ -107,7 +107,7 @@
 				<plugin>
 					<groupId>org.apache.felix</groupId>
 					<artifactId>maven-bundle-plugin</artifactId>
-					<version>4.2.1</version>
+					<version>5.1.2</version>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>

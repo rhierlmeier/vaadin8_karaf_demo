@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <features name="${project.artifactId}" xmlns="http://karaf.apache.org/xmlns/features/v1.4.0">
 
+    <repository>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.version}/xml/features</repository>
+    <repository>mvn:org.apache.aries.jax.rs/org.apache.aries.jax.rs.features/${aries.jax.rs.version}/xml</repository>
+
     <feature name="${project.artifactId}" version="${project.version}">
         <feature version="[${vaadin.version},9)">vaadin</feature>
         <feature>war</feature>
+
+        <feature>pax-web-http-whiteboard</feature>
+        <feature>aries-jax-rs-whiteboard</feature>
+        <feature>aries-jax-rs-whiteboard-jackson</feature>
+
         <bundle>mvn:${project.groupId}/${project.artifactId}/${project.version}</bundle>
+
+
     </feature>
+
+
+
+
     <feature name="vaadin" version="${vaadin.version}">
         <feature>http</feature>
         <feature>http-whiteboard</feature>

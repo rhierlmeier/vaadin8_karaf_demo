@@ -16,12 +16,17 @@
 	<properties>
 		<vaadin.version>8.14.0</vaadin.version>
 		<vaadin.plugin.version>8.14.0</vaadin.plugin.version>
+		<cxf.version>3.4.4</cxf.version>
+		<aries.jax.rs.version>1.0.6</aries.jax.rs.version>
 		<jetty.plugin.version>9.4.43.v20210629</jetty.plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<!-- If there are no local customizations, this can also be "fetch" or "cdn" -->
 		<vaadin.widgetset.mode>local</vaadin.widgetset.mode>
+
+
+		<jaxrs.spec.version>2.9.0</jaxrs.spec.version>
 
 		<karaf.version>4.3.3</karaf.version>
 	</properties>
@@ -80,15 +85,30 @@
 		<dependency>
 			<groupId>org.osgi</groupId>
 			<artifactId>osgi.annotation</artifactId>
-			<version>6.0.1</version>
+			<version>7.0.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.osgi</groupId>
 			<artifactId>osgi.cmpn</artifactId>
-			<version>6.0.0</version>
+			<version>7.0.0</version>
 			<scope>provided</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>javax.ws.rs-api</artifactId>
+			<version>2.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.annotation</groupId>
+			<artifactId>javax.annotation-api</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
